@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Label() {
+export default function Label(props) {
+    const {label} = props;
+
     return (
-        <div className='label'>
-            <div>Label</div>
-        </div>
+        <span>{label}</span>
     );
 }
