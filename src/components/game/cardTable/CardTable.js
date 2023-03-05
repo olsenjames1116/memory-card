@@ -14,7 +14,7 @@ import Lions from '../../../images/lions.jpeg';
 import Niners from '../../../images/niners.jpeg';
 import Raiders from '../../../images/raiders.jpeg';
 import Vikings from '../../../images/vikings.jpeg';
-
+import '../../../styles/game/cardTable/CardTable.css';
 
 export default function CardTable(props) {
     const {awardPoint, resetScore} = props;
@@ -170,16 +170,14 @@ export default function CardTable(props) {
     }
 
     return (
-        <div className='cardTable'>
-            <ul>
-                {
-                    cardArray.map((card) => {
-                        return (                        
-                            <Card key={card.id} card={card} handleClick={handleClick} />
-                        );
-                    })
-                }
-            </ul>
-        </div>
+        <ul className='cardTable'>
+            {
+                cardArray.map((card) => {
+                    return (                        
+                        <Card key={card.id} card={card} handleClick={handleClick} />
+                    );
+                })
+            }
+        </ul>
     );
 }
