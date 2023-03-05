@@ -4,10 +4,10 @@ import Label from './label/Label.js';
 
 export default function Card(props) {
     const {name, src, alt, label} = props.card;
-    const {randomizeCards} = props;
+    const {handleClick} = props;
 
     return (
-        <li id={name} className='card' onClick={randomizeCards}>
+        <li id={name} className='card' onClick={handleClick}>
             <Picture src={src} alt={alt}/>
             <Label label={label}/>
         </li>

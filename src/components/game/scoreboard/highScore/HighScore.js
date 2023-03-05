@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default function HighScore() {
+export default function HighScore(props) {
+    const {highScore} = props;
+
     return (
         <div className='highScore'>
-            <div>High Score: 0</div>
+            <div>High Score: {highScore}</div>
         </div>
     );
 }

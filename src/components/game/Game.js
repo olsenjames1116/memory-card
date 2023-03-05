@@ -1,13 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Scoreboard from './scoreboard/Scoreboard.js';
 import CardTable from './cardTable/CardTable.js';
 
 export default function Game() {
+    const [currentScore, setCurrentScore] = useState(0);
+
+    function awardPoint() {
+        setCurrentScore((prevScore) => prevScore + 1);
+    }
+
+    function resetScore() {
+        setCurrentScore(0);
+    }
+
     return (
         <div className='game'>
-            <div>Game</div>
-            <Scoreboard />
-            <CardTable />
+            <Scoreboard currentScore={currentScore} />
+            <CardTable awardPoint={awardPoint} resetScore={resetScore}/>
         </div>
     );
 }
