@@ -19,6 +19,7 @@ import '../../../styles/game/cardTable/CardTable.css';
 export default function CardTable(props) {
     const {awardPoint, resetScore} = props;
 
+    // An array of cards for each NFL team
     const [cardArray, setCardArray] = useState([
         {   
             id: uniqid(),
@@ -118,14 +119,17 @@ export default function CardTable(props) {
         }
     ]);
 
+    // Utilize lodash's shuffle to randomize cards after each click
     function randomizeCards() {
         setCardArray(() => _.shuffle([...cardArray]));
     }
 
+    // Randomize cards on mounting
     useEffect(() => {
         randomizeCards();
     }, []);
 
+    // Reached when a card has been selected twice in the same round. Resets the cards for a new round
     function deselectCards() {
         setCardArray((prevArray) => {
             return (
@@ -137,6 +141,7 @@ export default function CardTable(props) {
         });
     }
 
+    // Reached whenever a card that has not been selected yet in the round
     function selectCard(targetCard) {
         setCardArray((prevArray) => {
             return (
@@ -150,20 +155,24 @@ export default function CardTable(props) {
         });
     }
 
+    // Checks if a card has been selected yet and routes it to the appropriate function
     function checkSelected(id) {
         const targetCard = cardArray.find((card) => card.name === id);
         const {selected} = targetCard;
 
+        // A card has been selected already and a new round needs to start
         if(selected) {
             resetScore();
             deselectCards();
             return;
         }
 
+        // Reached when a card has not been selected yet so a point must be given and the round continues
         awardPoint();
         selectCard(targetCard);
     }
 
+    // Reached when a card has been clicked and routes it to the appropriate functions
     function handleClick(event) {
         checkSelected(event.currentTarget.id);
         randomizeCards();
@@ -172,6 +181,7 @@ export default function CardTable(props) {
     return (
         <ul className='cardTable'>
             {
+                // Create cards for every object in the array
                 cardArray.map((card) => {
                     return (                        
                         <Card key={card.id} card={card} handleClick={handleClick} />

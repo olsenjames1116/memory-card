@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Displays the high score for a user
 export default function HighScore(props) {
     const {highScore} = props;
 

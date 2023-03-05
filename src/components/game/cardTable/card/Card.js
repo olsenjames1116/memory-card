@@ -3,6 +3,7 @@ import Picture from './picture/Picture.js';
 import Label from './label/Label.js';
 import '../../../../styles/game/cardTable/card/Card.css';
 
+// Display a card for each NFL team
 export default function Card(props) {
     const {name, src, alt, label} = props.card;
     const {handleClick} = props;

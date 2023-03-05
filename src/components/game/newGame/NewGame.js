@@ -1,7 +1,9 @@
 import React from 'react';
 import '../../../styles/game/newGame/NewGame.css';
 
+// Reached when a user has won the game
 export default function NewGame() {
+    // Reload the page to start a new game
     function reloadPage() {
         window.location.reload();
     }
