@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../../styles/game/newGame/NewGame.css';
 
 export default function NewGame() {
     function reloadPage() {
