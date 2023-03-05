@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Scoreboard from './scoreboard/Scoreboard.js';
 import CardTable from './cardTable/CardTable.js';
 import NewGame from './newGame/NewGame.js';
+import '../../styles/game/Game.css';
 
 export default function Game() {
     const [currentScore, setCurrentScore] = useState(0);
