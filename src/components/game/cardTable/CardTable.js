@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import uniqid from 'uniqid';
+import _ from 'lodash';
 import Card from './card/Card.js';
 import Bears from '../../../images/bears.jpeg';
 import Browns from '../../../images/browns.jpeg';
@@ -116,17 +117,7 @@ export default function CardTable(props) {
     ]);
 
     function randomizeCards() {
-        const numArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-        const copyArray = [...cardArray];
-        const newCardArray = [];
-
-        while(numArray.length > 0) {
-            const num = Math.round(Math.random() * (numArray.length - 1));
-            const index = numArray.splice(num, 1);
-            newCardArray.push(copyArray[index]);
-        }
-
-        setCardArray(newCardArray);
+        setCardArray(() => _.shuffle([...cardArray]));
     }
 
     useEffect(() => {
@@ -141,17 +132,29 @@ export default function CardTable(props) {
 
         if(selected) {
             resetScore();
+            console.log('already selected');
             //reset card selected attributes to false
             return;
         }
 
         awardPoint();
-        //set selected to true
+        setCardArray((prevArray) => {
+            return (
+                prevArray.map((card) => {
+                    if(card === targetCard) {
+                        card.selected = true;
+                        console.log(card);
+                        return;
+                    }
+                    return card;
+                })
+            );
+        });
     }
 
     function handleClick(event) {
-        randomizeCards();
         checkSelected(event.currentTarget.id);
+        randomizeCards();
     }
 
     return (
