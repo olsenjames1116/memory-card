@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.01d36bd5.css",
-    "main.js": "/static/js/main.5bb4bdcf.js",
-    "static/media/lions.jpeg": "/static/media/lions.5b2528460702d089ca57.jpeg",
-    "static/media/chargers.jpeg": "/static/media/chargers.92a654bd957900ba52f6.jpeg",
-    "static/media/buccaneers.jpeg": "/static/media/buccaneers.1513034a288b8a0c6fdb.jpeg",
-    "static/media/browns.jpeg": "/static/media/browns.10f5b2be72a542e4a5b8.jpeg",
-    "static/media/chiefs.jpeg": "/static/media/chiefs.67aa21db02f634c4dbce.jpeg",
-    "static/media/niners.jpeg": "/static/media/niners.8fd91c86cc04e34b5144.jpeg",
-    "static/media/raiders.jpeg": "/static/media/raiders.4280ac89ebf11181803b.jpeg",
-    "static/media/eagles.jpeg": "/static/media/eagles.6b4d60b9eabc7e34ef0e.jpeg",
-    "static/media/giants.jpeg": "/static/media/giants.cd3cb66938d44bab84cf.jpeg",
-    "static/media/colts.jpeg": "/static/media/colts.30893793e1cf986cc454.jpeg",
-    "static/media/bears.jpeg": "/static/media/bears.462071b83f616055ed8b.jpeg",
-    "static/media/vikings.jpeg": "/static/media/vikings.df3c4fc700d607875cae.jpeg",
-    "static/media/freshman-webfont.woff": "/static/media/freshman-webfont.26600c0440468f478c58.woff",
-    "static/media/freshman-webfont.woff2": "/static/media/freshman-webfont.1f6781b2d02235d1137e.woff2",
-    "index.html": "/index.html",
-    "main.01d36bd5.css.map": "/static/css/main.01d36bd5.css.map",
-    "main.5bb4bdcf.js.map": "/static/js/main.5bb4bdcf.js.map"
+    "main.css": "/memory-card/static/css/main.aa103fc1.css",
+    "main.js": "/memory-card/static/js/main.6993dab6.js",
+    "static/media/lions.jpeg": "/memory-card/static/media/lions.5b2528460702d089ca57.jpeg",
+    "static/media/chargers.jpeg": "/memory-card/static/media/chargers.92a654bd957900ba52f6.jpeg",
+    "static/media/buccaneers.jpeg": "/memory-card/static/media/buccaneers.1513034a288b8a0c6fdb.jpeg",
+    "static/media/browns.jpeg": "/memory-card/static/media/browns.10f5b2be72a542e4a5b8.jpeg",
+    "static/media/chiefs.jpeg": "/memory-card/static/media/chiefs.67aa21db02f634c4dbce.jpeg",
+    "static/media/niners.jpeg": "/memory-card/static/media/niners.8fd91c86cc04e34b5144.jpeg",
+    "static/media/raiders.jpeg": "/memory-card/static/media/raiders.4280ac89ebf11181803b.jpeg",
+    "static/media/eagles.jpeg": "/memory-card/static/media/eagles.6b4d60b9eabc7e34ef0e.jpeg",
+    "static/media/giants.jpeg": "/memory-card/static/media/giants.cd3cb66938d44bab84cf.jpeg",
+    "static/media/colts.jpeg": "/memory-card/static/media/colts.30893793e1cf986cc454.jpeg",
+    "static/media/bears.jpeg": "/memory-card/static/media/bears.462071b83f616055ed8b.jpeg",
+    "static/media/vikings.jpeg": "/memory-card/static/media/vikings.df3c4fc700d607875cae.jpeg",
+    "static/media/freshman-webfont.woff": "/memory-card/static/media/freshman-webfont.26600c0440468f478c58.woff",
+    "static/media/freshman-webfont.woff2": "/memory-card/static/media/freshman-webfont.1f6781b2d02235d1137e.woff2",
+    "index.html": "/memory-card/index.html",
+    "main.aa103fc1.css.map": "/memory-card/static/css/main.aa103fc1.css.map",
+    "main.6993dab6.js.map": "/memory-card/static/js/main.6993dab6.js.map"
   },
   "entrypoints": [
-    "static/css/main.01d36bd5.css",
-    "static/js/main.5bb4bdcf.js"
+    "static/css/main.aa103fc1.css",
+    "static/js/main.6993dab6.js"
   ]
 }
