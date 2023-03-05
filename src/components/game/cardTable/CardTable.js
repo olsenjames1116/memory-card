@@ -17,6 +17,8 @@ import Vikings from '../../../images/vikings.jpeg';
 
 
 export default function CardTable(props) {
+    const {awardPoint, resetScore} = props;
+
     const [cardArray, setCardArray] = useState([
         {   
             id: uniqid(),
@@ -124,7 +126,29 @@ export default function CardTable(props) {
         randomizeCards();
     }, []);
 
-    const {awardPoint, resetScore} = props;
+    function deselectCards() {
+        setCardArray((prevArray) => {
+            return (
+                prevArray.map((card) => {
+                    if(card.selected) card.selected = false;
+                    return card;
+                })
+            );
+        });
+    }
+
+    function selectCard(targetCard) {
+        setCardArray((prevArray) => {
+            return (
+                prevArray.map((card) => {
+                    if(card === targetCard) {
+                        card.selected = true;
+                    }
+                    return card;
+                })
+            );
+        });
+    }
 
     function checkSelected(id) {
         const targetCard = cardArray.find((card) => card.name === id);
@@ -132,24 +156,12 @@ export default function CardTable(props) {
 
         if(selected) {
             resetScore();
-            console.log('already selected');
-            //reset card selected attributes to false
+            deselectCards();
             return;
         }
 
         awardPoint();
-        setCardArray((prevArray) => {
-            return (
-                prevArray.map((card) => {
-                    if(card === targetCard) {
-                        card.selected = true;
-                        console.log(card);
-                        return;
-                    }
-                    return card;
-                })
-            );
-        });
+        selectCard(targetCard);
     }
 
     function handleClick(event) {
