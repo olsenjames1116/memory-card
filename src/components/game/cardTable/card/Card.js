@@ -1,6 +1,7 @@
 import React from 'react';
 import Picture from './picture/Picture.js';
 import Label from './label/Label.js';
+import '../../../../styles/game/cardTable/card/Card.css';
 
 export default function Card(props) {
     const {name, src, alt, label} = props.card;

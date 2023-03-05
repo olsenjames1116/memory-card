@@ -1,9 +1,10 @@
 import React from 'react';
+import '../../../../../styles/game/cardTable/card/picture/Picture.css';
 
 export default function Picture(props) {
     const {src, alt} = props;
 
     return (
-        <img src={src} alt={alt}></img>
+        <img className='picture' src={src} alt={alt}></img>
     );
 }
