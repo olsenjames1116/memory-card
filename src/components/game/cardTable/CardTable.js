@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import uniqid from 'uniqid';
 import Card from './card/Card.js';
 import Bears from '../../../images/bears.jpeg';
@@ -103,6 +103,24 @@ export default function CardTable() {
         }
     ]);
 
+    function randomizeCards() {
+        const numArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+        const copyArray = [...cardArray];
+        const newCardArray = [];
+
+        while(numArray.length > 0) {
+            const num = Math.round(Math.random() * (numArray.length - 1));
+            const index = numArray.splice(num, 1);
+            newCardArray.push(copyArray[index]);
+        }
+
+        setCardArray(newCardArray);
+    }
+
+    useEffect(() => {
+        randomizeCards();
+    }, []);
+
     return (
         <div className='cardTable'>
             <div>Card Table</div>
@@ -110,7 +128,7 @@ export default function CardTable() {
                 {
                     cardArray.map((card) => {
                         return (                        
-                            <Card key={card.id} card={card}/>
+                            <Card key={card.id} card={card} randomizeCards={randomizeCards} />
                         );
                     })
                 }
