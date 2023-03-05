@@ -4,4 +4,7 @@ div.footer {
   align-items: center;
   gap: 10px;
   padding: 10px;
+  background-color: #013369;
+  color: white;
+  font-size: 1.2rem;
 }

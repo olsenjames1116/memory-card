@@ -5,4 +5,9 @@ ul.cardTable {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 75px;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(66, 66, 66),
+    rgb(255, 255, 255)
+  );
 }
