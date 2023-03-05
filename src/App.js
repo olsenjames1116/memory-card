@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/header/Header.js';
 import Game from './components/game/Game.js';
 import Footer from './components/footer/Footer.js';
+import './styles/App.css';
 
 function App() {
   return (

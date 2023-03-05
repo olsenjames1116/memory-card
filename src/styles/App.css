@@ -1,0 +1,8 @@
+* {
+  outline: 1px solid black;
+}
+
+div.body {
+  display: flex;
+  flex-direction: column;
+}
